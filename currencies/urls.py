@@ -1,8 +1,6 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns, include, url
 from currencies.views import set_currency
 
-
 urlpatterns = patterns('',
-    url(r'^setcurrency/$', set_currency,
-        name='currencies_set_currency'),
-)
+                       url(r'^set_currency/$', set_currency, name='currencies_set_currency'),
+                       )
